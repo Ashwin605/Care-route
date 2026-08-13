@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+/* ============================================================
+   CARE ROUTE — Global Design System
+   ============================================================ */
+
+:root {
+  /* ─── Color Tokens ──────────────────────────────────────── */
+  --cr-background: #F7F8F6;
+  --cr-primary: #123B4A;
+  --cr-deep-text: #172126;
+  --cr-secondary: #2F6673;
+  --cr-sage: #6F9690;
+  --cr-success: #3F8068;
+  --cr-warning: #A98245;
+  --cr-critical: #A65353;
+  --cr-border: #DCE3E3;
+  --cr-white: #FFFFFF;
+  --cr-muted: #68757A;
+
+  /* ─── Surface Tokens ─────────────────────────────────────── */
+  --cr-surface: #FFFFFF;
+  --cr-surface-elevated: #FFFFFF;
+  --cr-surface-overlay: rgba(255, 255, 255, 0.92);
+
+  /* ─── Typography ──────────────────────────────────────────── */
+  --font-sans: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+/* ─── Tailwind v4 Theme Tokens ────────────────────────────── */
+@theme inline {
+  --color-background: var(--cr-background);
+  --color-foreground: var(--cr-deep-text);
+  --color-primary: var(--cr-primary);
+  --color-secondary: var(--cr-secondary);
+  --color-sage: var(--cr-sage);
+  --color-success: var(--cr-success);
+  --color-warning: var(--cr-warning);
+  --color-critical: var(--cr-critical);
+  --color-border: var(--cr-border);
+  --color-surface: var(--cr-surface);
+  --color-muted: var(--cr-muted);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* ─── Base Reset ──────────────────────────────────────────── */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cr-background);
+  color: var(--cr-deep-text);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+/* ─── Selection ───────────────────────────────────────────── */
+::selection {
+  background-color: var(--cr-primary);
+  color: var(--cr-white);
+}
+
+/* ─── Focus Styles ────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--cr-secondary);
+  outline-offset: 2px;
+}
+
+/* ─── Reduced Motion ──────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ─── Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--cr-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--cr-sage);
+}
+
+/* ─── Utilities ────────────────────────────────────────────── */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* ─── Typography Utilities ────────────────────────────────── */
+.text-editorial {
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+
+.text-editorial-tight {
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1.0;
+}
+
+.text-label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cr-muted);
+}
+
+.text-label-sm {
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cr-muted);
+}
+
+/* ─── Container Utilities ─────────────────────────────────── */
+.section-container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section-container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
