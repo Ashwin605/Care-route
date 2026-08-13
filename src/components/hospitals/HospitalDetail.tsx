@@ -171,7 +171,7 @@ function SendReferralDialog({ isOpen, onClose, hospital, onReferralSent }: SendR
       careRequirement: {
         resources: selectedResources,
         specialists: [],
-        maxDistance: 50,
+        radiusKm: 50,
       },
       status: 'PENDING',
       createdAt: now,
@@ -353,7 +353,7 @@ export default function HospitalDetail({ hospital, capacity, specialists }: Hosp
   };
 
   const handleStartJourney = () => {
-    let reqs: CareRequirement = { resources: [], specialists: [], maxDistance: 50 };
+    let reqs: CareRequirement = { resources: [], specialists: [], radiusKm: 50 };
     const reqsStr = localStorage.getItem('careRequirements');
     if (reqsStr) {
       try {

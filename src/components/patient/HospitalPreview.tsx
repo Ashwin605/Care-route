@@ -74,7 +74,7 @@ export default function HospitalPreview({ hospital }: HospitalPreviewProps) {
         const dist = calculateDistance(userLocation, hospital.coordinates);
         const eta = calculateETA(dist);
         // Mock requirement for demo purposes to get a valid time to care
-        const mockReq = { careType: null, urgency: 'URGENT' as const, resources: [], specialist: null, location: userLocation, radiusKm: 50, accessibilityNeeds: [] };
+        const mockReq = { careType: null, urgency: 'URGENT' as const, resources: [], specialists: [], location: userLocation, radiusKm: 50, accessibilityNeeds: [] };
         const timeToCare = calculateTotalTimeToCare(hospital, mockReq, eta, MOCK_CAPACITY[hospital.id] || [], MOCK_SPECIALISTS[hospital.id] || []);
         
         return (

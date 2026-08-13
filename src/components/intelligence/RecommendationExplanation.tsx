@@ -55,9 +55,9 @@ export default function RecommendationExplanation({
             Care Requirement Match
           </h3>
           <div className="space-y-3">
-            {requirements.specialist && requirements.specialist !== 'UNKNOWN' && (
+            {requirements.specialists && requirements.specialists !== 'UNKNOWN' && (
               <div className="flex justify-between items-center text-sm border-b border-[var(--cr-border)] pb-2">
-                <span className="text-[var(--cr-deep-text)] font-medium">{requirements.specialist}</span>
+                <span className="text-[var(--cr-deep-text)] font-medium">{requirements.specialists}</span>
                 <span className="flex items-center gap-1 text-[var(--cr-success)] text-xs font-bold uppercase"><Check size={14}/> Available</span>
               </div>
             )}
@@ -73,7 +73,7 @@ export default function RecommendationExplanation({
                 <span className="flex items-center gap-1 text-[var(--cr-success)] text-xs font-bold uppercase"><Check size={14}/> Available</span>
               </div>
             ))}
-            {!requirements.specialist && requirements.resources.length === 0 && (
+            {!requirements.specialists && requirements.resources.length === 0 && (
                <div className="text-sm text-[var(--cr-muted)] italic">General care requirements met.</div>
             )}
           </div>

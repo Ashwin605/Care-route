@@ -13,7 +13,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 // Hardcoded Baseline Patients for Simulation
 const PATIENT_PROFILES: Record<string, CareRequirement> = {
   'cardiac-emergency': {
-    condition: 'Cardiac Arrest',
+    // condition: 'Cardiac Arrest',
     severity: 'critical',
     requiredSpecialties: ['Cardiology', 'Emergency Medicine'],
     requiredResources: ['ICU', 'Ventilator', 'Cardiac Cath Lab'],
@@ -21,7 +21,7 @@ const PATIENT_PROFILES: Record<string, CareRequirement> = {
     transportMode: 'ambulance'
   },
   'stroke': {
-    condition: 'Acute Stroke',
+    // condition: 'Acute Stroke',
     severity: 'critical',
     requiredSpecialties: ['Neurology', 'Emergency Medicine'],
     requiredResources: ['ICU', 'Imaging'],

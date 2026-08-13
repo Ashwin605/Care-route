@@ -34,7 +34,7 @@ export function useJourneyMonitor(initialJourney: CareJourney, pollingIntervalMs
     const checkDestination = () => {
       try {
         // 1. Get Requirements
-        let reqs: CareRequirement = { resources: [], specialists: [], maxDistance: 50 };
+        let reqs: CareRequirement = { resources: [], specialists: [], radiusKm: 50 };
         const reqsStr = localStorage.getItem('careRequirements');
         if (reqsStr) {
           try { reqs = JSON.parse(reqsStr); } catch (e) {}
@@ -115,7 +115,7 @@ export function useJourneyMonitor(initialJourney: CareJourney, pollingIntervalMs
            newEvents.push({
              id: uuidv4(),
              timestamp: now,
-             type: 'MONITORING_INTERRUPTED',
+             type: 'CANCELLED',
              description: `Could not verify destination status`
            });
         }
@@ -230,7 +230,7 @@ export function useJourneyMonitor(initialJourney: CareJourney, pollingIntervalMs
            updatedEvents.push({
             id: uuidv4(),
             timestamp: new Date(now).toISOString(),
-            type: 'JOURNEY_ARRIVING',
+            type: 'ARRIVING',
             description: `Arriving at destination shortly`
           });
         }

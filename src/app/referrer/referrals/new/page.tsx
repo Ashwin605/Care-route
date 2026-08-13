@@ -9,7 +9,7 @@ import { analyzeHealthcareNetwork } from '../../../../lib/intelligence/networkAn
 import { CareRequirement } from '../../../../types/care';
 import { RecommendationResult } from '../../../../types/recommendation';
 import { v4 as uuidv4 } from 'uuid';
-import { ChevronRight, ChevronLeft, CheckCircle2, User, Activity, MapPin, Search, FileText } from 'lucide-react';
+import { ChevronRight, ChevronLeft, CheckCircle2, User, Activity, MapPin, Search, FileText , AlertTriangle, Building2 } from 'lucide-react';
 import { useAuth } from '../../../../contexts/AuthContext';
 
 export default function NewReferralWizard() {

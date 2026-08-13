@@ -60,7 +60,7 @@ export function transitionReferral(
     type: activityTypeMap[newStatus],
     description,
     timestamp: updatedReferral.updatedAt,
-    actor: {
+    actorId: {
       id: actorId,
       role: actorRole
     }

@@ -42,9 +42,9 @@ export default function NearestVsSuitable({ nearest, bestMatch, requirements }: 
                 0 available
               </span>
             </div>
-            {requirements.specialist && (
+            {requirements.specialists && (
               <div className="flex justify-between items-center text-sm">
-                <span className="text-[var(--cr-muted)]">{requirements.specialist}:</span>
+                <span className="text-[var(--cr-muted)]">{requirements.specialists}:</span>
                 <span className="font-medium text-[var(--cr-success)] flex items-center gap-1">
                   Available
                 </span>
@@ -84,9 +84,9 @@ export default function NearestVsSuitable({ nearest, bestMatch, requirements }: 
                 {bestMatch.expectedArrivalCapacity?.expectedAvailable || 2}
               </span>
             </div>
-            {requirements.specialist && (
+            {requirements.specialists && (
               <div className="flex justify-between items-center text-sm">
-                <span className="text-[var(--cr-muted)]">{requirements.specialist}:</span>
+                <span className="text-[var(--cr-muted)]">{requirements.specialists}:</span>
                 <span className="font-medium text-[var(--cr-success)] flex items-center gap-1">
                   Available
                 </span>

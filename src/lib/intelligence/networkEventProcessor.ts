@@ -24,7 +24,7 @@ export function processNetworkEventForJourneys(event: NetworkEvent): CareJourney
   }
 
   // 3. Re-evaluate destination using existing matching engine
-  let reqs: CareRequirement = { resources: [], specialists: [], maxDistance: 50 };
+  let reqs: CareRequirement = { resources: [], specialists: [], radiusKm: 50 };
   const reqsStr = localStorage.getItem('careRequirements');
   if (reqsStr) {
     try { reqs = JSON.parse(reqsStr); } catch (e) {}

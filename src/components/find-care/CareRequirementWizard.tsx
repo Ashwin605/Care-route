@@ -24,7 +24,7 @@ export default function CareRequirementWizard() {
     careType: 'UNKNOWN',
     urgency: 'UNKNOWN',
     resources: [],
-    specialist: 'UNKNOWN',
+    specialists: 'UNKNOWN',
     location: null,
     radiusKm: 20,
     accessibilityNeeds: []
@@ -129,7 +129,7 @@ export default function CareRequirementWizard() {
           )}
           {step === 4 && (
             <motion.div key="step4" variants={variants} initial="initial" animate="animate" exit="exit" className="w-full">
-              <SpecialistStep value={reqs.specialist} onNext={(val) => handleNext({ specialist: val })} onBack={handleBack} />
+              <SpecialistStep value={reqs.specialists} onNext={(val) => handleNext({ specialists: val })} onBack={handleBack} />
             </motion.div>
           )}
           {step === 5 && (

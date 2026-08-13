@@ -7,7 +7,7 @@ import { CareRequirement } from '../../types/care';
 
 export function evaluateReroute(journey: CareJourney, trigger: RerouteTrigger): RerouteEvaluation {
   // 1. Read original requirements
-  let originalReqs: CareRequirement = { resources: [], specialists: [], maxDistance: 50 };
+  let originalReqs: CareRequirement = { resources: [], specialists: [], radiusKm: 50 };
   const reqsStr = localStorage.getItem('careRequirements');
   if (reqsStr) {
     try { originalReqs = JSON.parse(reqsStr); } catch (e) {}

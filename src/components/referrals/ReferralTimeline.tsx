@@ -59,7 +59,7 @@ export default function ReferralTimeline({ activities }: ReferralTimelineProps) 
                 <div className="flex items-center gap-2 mt-1">
                   <span className="text-xs font-bold text-[var(--cr-primary)]">{date}</span>
                   <span className="text-[10px] text-[var(--cr-muted)] font-medium">• {time}</span>
-                  <span className="text-[10px] bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded font-bold uppercase tracking-wider ml-2">{act.actor.role.replace(/_/g, ' ')}</span>
+                  <span className="text-[10px] bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded font-bold uppercase tracking-wider ml-2">{act.actorId.role.replace(/_/g, ' ')}</span>
                 </div>
               </div>
             </div>

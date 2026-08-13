@@ -407,7 +407,7 @@ export function ReviewStep({ reqs, onSubmit, onBack, onEdit }: { reqs: CareRequi
       <div className="bg-[var(--cr-background)] rounded-xl p-5 mb-8 border border-[var(--cr-border)]">
         <SummaryRow label="Care Needed" value={reqs.careType || 'Not specified'} stepIndex={1} />
         <SummaryRow label="Urgency" value={reqs.urgency || 'Not specified'} stepIndex={2} />
-        <SummaryRow label="Specialist" value={reqs.specialist || 'Not specified'} stepIndex={4} />
+        <SummaryRow label="Specialist" value={reqs.specialists || 'Not specified'} stepIndex={4} />
         <SummaryRow label="Resources" value={reqs.resources.length > 0 ? reqs.resources.join(', ') : 'None'} stepIndex={3} />
         <SummaryRow label="Accessibility" value={reqs.accessibilityNeeds && reqs.accessibilityNeeds.length > 0 ? reqs.accessibilityNeeds.join(', ') : 'None'} stepIndex={6} />
         <SummaryRow label="Location" value="Current location" stepIndex={5} />

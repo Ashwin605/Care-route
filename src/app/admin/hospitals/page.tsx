@@ -17,7 +17,7 @@ export default function AdminHospitalsPage() {
       const search = searchTerm.toLowerCase();
       const matchesSearch = 
         h.name.toLowerCase().includes(search) || 
-        h.address.toLowerCase().includes(search) || 
+        (h.address || "").toLowerCase().includes(search) || 
         h.id.toLowerCase().includes(search);
       if (!matchesSearch) return false;
 
@@ -132,7 +132,7 @@ export default function AdminHospitalsPage() {
                     <tr key={h.id} className="hover:bg-gray-50 transition-colors group">
                       <td className="px-6 py-4">
                         <div className="font-semibold text-[var(--cr-deep-text)] uppercase">{h.name}</div>
-                        <div className="text-xs text-[var(--cr-muted)] mt-1">{h.id} • {h.address}</div>
+                        <div className="text-xs text-[var(--cr-muted)] mt-1">{h.id} • {(h.address || "")}</div>
                       </td>
                       <td className="px-6 py-4 hidden md:table-cell">
                         {getStatusBadge(h.emergencyStatus)}
