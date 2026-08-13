@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { useNetworkState } from '../../contexts/NetworkStateContext';
 import { Activity, Clock, CheckCircle2, XCircle, ChevronRight, MapPin, Building2, AlertTriangle, FileText, RefreshCw, FilePlus } from 'lucide-react';
