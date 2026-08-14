@@ -20,8 +20,8 @@ const navItems = [
 ];
 
 const secondaryNav = [
-  { label: 'Settings', href: '#', icon: Settings },
-  { label: 'Help', href: '#', icon: HelpCircle },
+  { label: 'Settings', href: '/hospital/settings', icon: Settings },
+  { label: 'Help', href: '/hospital/help', icon: HelpCircle },
 ];
 
 export default function HospitalSidebar() {

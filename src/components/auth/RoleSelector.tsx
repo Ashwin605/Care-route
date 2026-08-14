@@ -19,14 +19,14 @@ const roles: { id: Role; title: string; description: string; icon: any; route: s
     title: 'Referrer',
     description: 'For doctors and healthcare professionals. Create referrals, find suitable hospitals, and track patients.',
     icon: UserRound,
-    route: '/referrer/dashboard',
+    route: '/referrer',
   },
   {
     id: 'HOSPITAL_STAFF',
     title: 'Hospital Staff',
     description: 'Manage capacity and incoming referrals. Update beds, manage resources, and accept referrals.',
     icon: Building2,
-    route: '/hospital/dashboard',
+    route: '/hospital',
   },
   {
     id: 'ADMIN',

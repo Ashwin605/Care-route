@@ -193,8 +193,8 @@ export default function ReferrerDashboard() {
                     </div>
                     <div className="flex items-center gap-2 mt-1">
                       <span className="text-xs font-bold text-[var(--cr-muted)] bg-gray-100 px-1.5 py-0.5 rounded">{h.distanceKm} km</span>
-                      <span className={`text-[10px] font-bold uppercase ${h.operationalStatus === 'ACCEPTING_ALL' ? 'text-[var(--cr-success)]' : 'text-[var(--cr-warning)]'}`}>
-                        {h.operationalStatus.replace(/_/g, ' ')}
+                      <span className={`text-[10px] font-bold uppercase ${(h.operationalStatus || '').valueOf() === 'ACCEPTING_ALL' ? 'text-[var(--cr-success)]' : 'text-[var(--cr-warning)]'}`}>
+                        {(h.operationalStatus || 'UNKNOWN').replace(/_/g, ' ')}
                       </span>
                     </div>
                   </div>

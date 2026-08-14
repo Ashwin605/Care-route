@@ -318,7 +318,7 @@ export default function ReferralReview({ params }: { params: { id: string } }) {
               <div>
                 <p className="text-xs font-bold text-[var(--cr-muted)] uppercase tracking-widest mb-2">Hospital Status</p>
                 <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest border ${hospital.operationalStatus === 'ACCEPTING_ALL' ? 'bg-[var(--cr-success)]/10 text-[var(--cr-success)] border-[var(--cr-success)]/20' : 'bg-[var(--cr-warning)]/10 text-[var(--cr-warning)] border-[var(--cr-warning)]/20'}`}>
-                  {hospital.operationalStatus.replace(/_/g, ' ')}
+                  {(hospital.operationalStatus || 'UNKNOWN').replace(/_/g, ' ')}
                 </span>
               </div>
 

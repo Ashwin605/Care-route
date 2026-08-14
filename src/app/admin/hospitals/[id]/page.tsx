@@ -7,7 +7,7 @@ import { MOCK_HOSPITALS } from '@/data/mockHospitals';
 import { MOCK_CAPACITY } from '@/data/mockHospitalCapacity';
 import { publishNetworkEvent } from '@/data/mockEvents';
 import { getFreshnessState } from '@/types/intelligence';
-import { ArrowLeft, Building2, MapPin, Activity, AlertTriangle, CheckCircle2, XCircle, Clock, Edit2, ShieldAlert } from 'lucide-react';
+import { ArrowLeft, Building2, MapPin, Activity, AlertTriangle, CheckCircle2, XCircle, Clock, Edit2, ShieldAlert, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function AdminHospitalDetailsPage() {
