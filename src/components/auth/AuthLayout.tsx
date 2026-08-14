@@ -39,7 +39,7 @@ export default function AuthLayout({ children, heading, subheading }: AuthLayout
           transition={{ duration: 0.8, ease: animation.easeOut }}
         >
           <h1 className="text-editorial text-4xl xl:text-5xl text-white leading-[1.06] tracking-[-0.02em]">
-            {heading.split('\n').map((line, i) => (
+            {heading.split(/\\n|\n/).map((line, i) => (
               <span key={i}>
                 {line}
                 <br />
