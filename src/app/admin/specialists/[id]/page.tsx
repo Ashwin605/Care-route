@@ -219,7 +219,7 @@ export default function AdminSpecialistEditorPage() {
               exit={{ opacity: 0, scale: 0.95 }}
               className="bg-white rounded-2xl shadow-xl border border-[var(--cr-border)] max-w-md w-full overflow-hidden"
             >
-              <div className="p-6 border-b border-[var(--cr-border)] bg-[var(--cr-danger)]/10 text-[var(--cr-danger)] flex items-center gap-3">
+              <div className="p-6 border-b border-[var(--cr-border)] bg-[var(--cr-critical)]/10 text-[var(--cr-critical)] flex items-center gap-3">
                 <AlertTriangle size={24} />
                 <h3 className="text-lg font-semibold tracking-tight">Confirm Specialist Unavailability</h3>
               </div>
@@ -239,7 +239,7 @@ export default function AdminSpecialistEditorPage() {
                   <ChevronRight className="text-[var(--cr-muted)]" />
                   <div className="text-center">
                     <div className="text-[10px] font-bold uppercase tracking-widest text-[var(--cr-muted)] mb-2">New</div>
-                    <span className="px-3 py-1.5 rounded text-[10px] font-bold uppercase tracking-widest border border-[var(--cr-danger)]/30 text-[var(--cr-danger)] bg-[var(--cr-danger)]/5">
+                    <span className="px-3 py-1.5 rounded text-[10px] font-bold uppercase tracking-widest border border-[var(--cr-critical)]/30 text-[var(--cr-critical)] bg-[var(--cr-critical)]/5">
                       Unavailable
                     </span>
                   </div>
@@ -257,7 +257,7 @@ export default function AdminSpecialistEditorPage() {
                   </button>
                   <button 
                     onClick={confirmStatusChange}
-                    className="px-4 py-2 text-xs font-bold uppercase tracking-widest text-white bg-[var(--cr-danger)] hover:bg-[var(--cr-danger)]/90 rounded transition-colors"
+                    className="px-4 py-2 text-xs font-bold uppercase tracking-widest text-white bg-[var(--cr-critical)] hover:bg-[var(--cr-critical)]/90 rounded transition-colors"
                   >
                     Confirm Unavailability
                   </button>
